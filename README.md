@@ -103,10 +103,19 @@ pip install -r requirements.txt
  
 | Metric | Validation | Test |
 |---|---|---|
-| Accuracy |  |  |
-| Precision |  |  |
-| Recall |  |  |
-| F1 Score |  |  |
+| Accuracy | 68.70% | 67.74% |
+| Precision | 69.00% | 69.64% |
+| Recall | 69.00% | 67.74% |
+| F1 Score | 68.00% | 65.76% |
+ 
+**Per class — Test set:**
+ 
+| Class | Precision | Recall | F1 |
+|---|---|---|---|
+| AI Generated Images | 65% | 88% | 75% |
+| Real Images | 75% | 43% | 55% |
+ 
+The model performs better at detecting AI Generated images (recall 88%) than Real images (recall 43%), meaning it tends to classify uncertain images as AI Generated.
 ---
 
 ## File Descriptions
