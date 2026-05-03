@@ -133,34 +133,21 @@ The model performs better at detecting AI Generated images (recall 88%) than Rea
 | `split_dataset.sh` | Bash script to split raw dataset into train/validation/test |
 
 ---
-
-## Using interface.py
-
-**Retrain:**
-```python
-import torch
-from torch import nn, optim
-from interface import TheModel, the_trainer, the_dataloader, total_epochs
+## How to Run
  
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = TheModel().to(device)
-train_loader = the_dataloader("train")
-loss_fn = nn.CrossEntropyLoss()
-optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=1e-4)
-model = the_trainer(model, total_epochs, train_loader, loss_fn, optimizer)
-```
-
-**Run inference:**
-```python
-import os
-from interface import the_predictor, the_data_dir
+```bash
+# Train
+python train.py
  
-img_paths = sorted([
-    os.path.join(the_data_dir, f)
-    for f in os.listdir(the_data_dir)
-    if f.lower().endswith(('.jpg', '.jpeg', '.png'))
-])
-results = the_predictor(img_paths)
-for r in results:
-    print(f"{r['file']} → {r['prediction']} ({r['confidence']}%)")
+# Evaluate (confusion matrix + Grad-CAM)
+python evaluate.py
+ 
+# Predict — all 20 images in data/ automatically
+python predict.py
+ 
+# Predict — specific images
+python predict.py --images data/img01.jpg data/img05.jpg
+ 
+# Predict — any new image
+python predict.py --images /path/to/image.jpg
 ```
