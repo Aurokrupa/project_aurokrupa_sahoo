@@ -1,0 +1,118 @@
+============================================================
+Started : 2026-05-03 15:34:03
+============================================================
+Device : cuda
+Epoch [01/40] Train Loss: 0.6922 Train Accuracy: 0.5465 | Validation Loss: 0.7011  Validation Accuracy: 0.5565
+ --> Saved best weights (val acc: 0.5565)
+Epoch [02/40] Train Loss: 0.6733 Train Accuracy: 0.5771 | Validation Loss: 0.7050  Validation Accuracy: 0.5565
+Epoch [03/40] Train Loss: 0.6841 Train Accuracy: 0.6043 | Validation Loss: 0.6675  Validation Accuracy: 0.6261
+ --> Saved best weights (val acc: 0.6261)
+Epoch [04/40] Train Loss: 0.6503 Train Accuracy: 0.6383 | Validation Loss: 0.6465  Validation Accuracy: 0.6435
+ --> Saved best weights (val acc: 0.6435)
+Epoch [05/40] Train Loss: 0.6502 Train Accuracy: 0.6508 | Validation Loss: 0.6386  Validation Accuracy: 0.6609
+ --> Saved best weights (val acc: 0.6609)
+Epoch [06/40] Train Loss: 0.6443 Train Accuracy: 0.6542 | Validation Loss: 0.6400  Validation Accuracy: 0.6609
+Epoch [07/40] Train Loss: 0.6312 Train Accuracy: 0.6531 | Validation Loss: 0.6438  Validation Accuracy: 0.6261
+Epoch [08/40] Train Loss: 0.6406 Train Accuracy: 0.6576 | Validation Loss: 0.6569  Validation Accuracy: 0.6174
+Epoch [09/40] Train Loss: 0.6509 Train Accuracy: 0.6451 | Validation Loss: 0.6305  Validation Accuracy: 0.6870
+ --> Saved best weights (val acc: 0.6870)
+Epoch [10/40] Train Loss: 0.6445 Train Accuracy: 0.6553 | Validation Loss: 0.6366  Validation Accuracy: 0.6435
+Epoch [11/40] Train Loss: 0.6371 Train Accuracy: 0.6440 | Validation Loss: 0.6464  Validation Accuracy: 0.6261
+Epoch [12/40] Train Loss: 0.6414 Train Accuracy: 0.6417 | Validation Loss: 0.6285  Validation Accuracy: 0.6696
+Epoch [13/40] Train Loss: 0.6511 Train Accuracy: 0.6293 | Validation Loss: 0.6507  Validation Accuracy: 0.6609
+Epoch [14/40] Train Loss: 0.6362 Train Accuracy: 0.6372 | Validation Loss: 0.6477  Validation Accuracy: 0.6261
+Epoch [15/40] Train Loss: 0.6419 Train Accuracy: 0.6485 | Validation Loss: 0.6289  Validation Accuracy: 0.6522
+Epoch [16/40] Train Loss: 0.6287 Train Accuracy: 0.6735 | Validation Loss: 0.6317  Validation Accuracy: 0.6522
+Epoch [17/40] Train Loss: 0.6278 Train Accuracy: 0.6610 | Validation Loss: 0.6132  Validation Accuracy: 0.6696
+Epoch [18/40] Train Loss: 0.6337 Train Accuracy: 0.6565 | Validation Loss: 0.6443  Validation Accuracy: 0.6348
+Epoch [19/40] Train Loss: 0.6201 Train Accuracy: 0.6576 | Validation Loss: 0.6422  Validation Accuracy: 0.6348
+Epoch [20/40] Train Loss: 0.6308 Train Accuracy: 0.6644 | Validation Loss: 0.6126  Validation Accuracy: 0.6783
+Epoch [21/40] Train Loss: 0.6174 Train Accuracy: 0.6655 | Validation Loss: 0.6832  Validation Accuracy: 0.6087
+Epoch [22/40] Train Loss: 0.6455 Train Accuracy: 0.6349 | Validation Loss: 0.6412  Validation Accuracy: 0.6609
+Epoch [23/40] Train Loss: 0.6309 Train Accuracy: 0.6519 | Validation Loss: 0.6302  Validation Accuracy: 0.6435
+Epoch [24/40] Train Loss: 0.6232 Train Accuracy: 0.6814 | Validation Loss: 0.6228  Validation Accuracy: 0.6174
+Epoch [25/40] Train Loss: 0.6375 Train Accuracy: 0.6576 | Validation Loss: 0.6495  Validation Accuracy: 0.6522
+Epoch [26/40] Train Loss: 0.6215 Train Accuracy: 0.6667 | Validation Loss: 0.6330  Validation Accuracy: 0.6348
+Epoch [27/40] Train Loss: 0.6216 Train Accuracy: 0.6735 | Validation Loss: 0.6383  Validation Accuracy: 0.6522
+Epoch [28/40] Train Loss: 0.6373 Train Accuracy: 0.6542 | Validation Loss: 0.6286  Validation Accuracy: 0.6087
+Epoch [29/40] Train Loss: 0.6260 Train Accuracy: 0.6599 | Validation Loss: 0.6160  Validation Accuracy: 0.6609
+Epoch [30/40] Train Loss: 0.6271 Train Accuracy: 0.6599 | Validation Loss: 0.6259  Validation Accuracy: 0.6348
+Early stopping at epoch 30
+
+Training complete. Best val accuracy: 0.6870
+Loaded weights from checkpoints/final_weights.pth
+
+============================================================
+VALIDATION RESULTS
+============================================================
+Validation Accuracy : 0.6870
+
+Classification Report (Validation):
+                     precision    recall  f1-score   support
+
+AI_Generated_Images       0.68      0.84      0.75        64
+        Real_Images       0.71      0.49      0.58        51
+
+           accuracy                           0.69       115
+          macro avg       0.69      0.67      0.67       115
+       weighted avg       0.69      0.69      0.68       115
+
+Confusion matrix saved to output/validation_confusion_matrix.png
+
+============================================================
+TEST RESULTS
+============================================================
+Test Accuracy : 0.6774
+
+Classification Report (Test):
+                     precision    recall  f1-score   support
+
+AI_Generated_Images       0.65      0.88      0.75        17
+        Real_Images       0.75      0.43      0.55        14
+
+           accuracy                           0.68        31
+          macro avg       0.70      0.66      0.65        31
+       weighted avg       0.70      0.68      0.66        31
+
+Confusion matrix saved to output/confusion_matrix.png
+
+Generating Grad-CAM visualizations...
+Loaded weights from checkpoints/final_weights.pth
+
+============================================================
+VALIDATION RESULTS
+============================================================
+Validation Accuracy : 0.6870
+
+Classification Report (Validation):
+                     precision    recall  f1-score   support
+
+AI_Generated_Images       0.68      0.84      0.75        64
+        Real_Images       0.71      0.49      0.58        51
+
+           accuracy                           0.69       115
+          macro avg       0.69      0.67      0.67       115
+       weighted avg       0.69      0.69      0.68       115
+
+Confusion matrix saved to output/validation_confusion_matrix.png
+
+============================================================
+TEST RESULTS
+============================================================
+Test Accuracy : 0.6774
+
+Classification Report (Test):
+                     precision    recall  f1-score   support
+
+AI_Generated_Images       0.65      0.88      0.75        17
+        Real_Images       0.75      0.43      0.55        14
+
+           accuracy                           0.68        31
+          macro avg       0.70      0.66      0.65        31
+       weighted avg       0.70      0.68      0.66        31
+
+Confusion matrix saved to output/confusion_matrix.png
+
+Generating Grad-CAM visualizations...
+Grad-CAM saved to output/gradcam_samples.png
+Metrics saved to output/metrics.txt

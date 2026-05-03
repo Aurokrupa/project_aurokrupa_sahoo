@@ -1,0 +1,5 @@
+model=ImageClassifier
+test_accuracy=0.6774
+precision=0.6964
+recall=0.6774
+f1=0.6576
