@@ -116,6 +116,7 @@ pip install -r requirements.txt
 | Real Images | 75% | 43% | 55% |
  
 The model performs better at detecting AI Generated images (recall 88%) than Real images (recall 43%), meaning it tends to classify uncertain images as AI Generated.
+
 ---
 
 ## File Descriptions
